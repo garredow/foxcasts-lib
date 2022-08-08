@@ -1,6 +1,5 @@
 {
   "name": "foxcasts-lib",
-  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -29,6 +28,10 @@
     "url": "https://github.com/garredow/foxcasts-lib/issues"
   },
   "homepage": "https://github.com/garredow/foxcasts-lib#readme",
+  "dependencies": {
+    "@urql/core": "^2.6.1",
+    "graphql": "^16.5.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
