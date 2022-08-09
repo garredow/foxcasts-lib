@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/garredow/foxcasts-lib/compare/v1.2.0...v1.2.1) (2022-08-09)
+
+
+### Bug Fixes
+
+* fix mutations ([8735535](https://github.com/garredow/foxcasts-lib/commit/8735535169ca292fa2ac9f032e2ebac9511c62c3))
+
 # [1.2.0](https://github.com/garredow/foxcasts-lib/compare/v1.1.0...v1.2.0) (2022-08-09)
 
 
