@@ -4,8 +4,8 @@ import { Graph } from './Graph';
 export class Episodes {
   private graph: Graph;
 
-  constructor(query: Graph) {
-    this.graph = query;
+  constructor(graph: Graph) {
+    this.graph = graph;
   }
 
   async updateProgress(episodeId: number, progress: number): Promise<void> {

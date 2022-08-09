@@ -28,10 +28,10 @@ export class Graph {
   }
 
   public async mutation<TData, TVariables extends object>(
-    query: TypedDocumentNode<TData, TVariables> | string,
+    mutation: TypedDocumentNode<TData, TVariables> | string,
     variables?: TVariables
   ): Promise<OperationResult<TData, TVariables>> {
-    const res = await this.client.query(query, variables).toPromise();
+    const res = await this.client.mutation(mutation, variables).toPromise();
     return res;
   }
 }

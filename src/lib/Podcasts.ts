@@ -5,8 +5,8 @@ import { Graph } from './Graph';
 export class Podcasts {
   private graph: Graph;
 
-  constructor(query: Graph) {
-    this.graph = query;
+  constructor(graph: Graph) {
+    this.graph = graph;
   }
 
   async subscribe(podcastId: number): Promise<void> {
