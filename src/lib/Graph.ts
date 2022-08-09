@@ -5,7 +5,7 @@ type Config = {
   apiToken: string;
 };
 
-export class Query {
+export class Graph {
   private client: Client;
 
   constructor(config: Config) {
@@ -19,10 +19,18 @@ export class Query {
     });
   }
 
-  public async send<TData, TVariables extends object>(
+  public async query<TData, TVariables extends object>(
     query: TypedDocumentNode<TData, TVariables> | string,
     variables?: TVariables
-  ): Promise<OperationResult<any, any>> {
+  ): Promise<OperationResult<TData, TVariables>> {
+    const res = await this.client.query(query, variables).toPromise();
+    return res;
+  }
+
+  public async mutation<TData, TVariables extends object>(
+    query: TypedDocumentNode<TData, TVariables> | string,
+    variables?: TVariables
+  ): Promise<OperationResult<TData, TVariables>> {
     const res = await this.client.query(query, variables).toPromise();
     return res;
   }

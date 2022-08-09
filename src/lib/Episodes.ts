@@ -1,14 +1,14 @@
 import { EpisodeProgress } from '../mutations/EpisodeProgress';
-import { Query } from './Query';
+import { Graph } from './Graph';
 
 export class Episodes {
-  private query: Query;
+  private graph: Graph;
 
-  constructor(query: Query) {
-    this.query = query;
+  constructor(query: Graph) {
+    this.graph = query;
   }
 
   async updateProgress(episodeId: number, progress: number): Promise<void> {
-    await this.query.send(EpisodeProgress, { episodeId, progress });
+    await this.graph.mutation(EpisodeProgress, { episodeId, progress });
   }
 }
